@@ -1,0 +1,88 @@
+<html>
+<head>
+<style>
+#top{
+  font-style: italic;
+  font-family: monospace;
+  color: #0000FF;
+}
+#StarVal{
+  font-style: italic;
+  font-family:cursive;
+  color: #000000;
+}
+#EndVal{
+  font-style: italic;
+  font-family: cursive;
+
+}
+body{
+  background-color: #F0FFFF;
+}
+</style>
+<script>
+
+function MiltoFur(){
+var x = document.getElementById('Start').value;
+var x = parseInt(x);
+var y = document.getElementById('End').value;
+var y = parseInt(y);
+
+var result = "";
+ for (var i = x; i <= y; i++)
+ {
+   var mult1 = i * 8;
+   result = result + i + "     " + mult1 + "<br>";
+  }
+  document.getElementById('result').innerHTML= result;
+}
+
+function Slugtolb()
+{
+var x = document.getElementById('Start').value;
+var x = parseInt(x);
+var y = document.getElementById('End').value;
+var y = parseInt(y);
+
+var result = "";
+ for (var i = x; i <= y; i++)
+ {
+   var mult1 = i * 32.174;
+   result = result + i + "     " + mult1 + "<br>";
+}
+document.getElementById('result').innerHTML=result;
+}
+
+
+function FortoDays()
+{
+var x = document.getElementById('Start').value;
+var x = parseInt(x);
+var y = document.getElementById('End').value;
+var y = parseInt(y);
+
+var result = "";
+ for (var i = x; i <= y; i++)
+ {
+   var mult1 = i * 14;
+   result = result + i + "     " + mult1 + "<br>";
+}
+document.getElementById('result').innerHTML=result;
+}
+</script>
+</head>
+<body>
+<p id="top"><center><h1>Old Unit Converter</h1></center></p>
+  <p id="StarVal">Start value</p>
+  <input type="text" id="Start">
+  <br><br>
+  <p id="EndVal">End Value</p>
+  <input type="text" id="End">
+  <img src="cowboys.png" height="10%" width="10%">
+  <br><br>
+  <input type="button" value="Miles to furlongs" onclick="MiltoFur()">
+  <input type="button" value="slugs to pounds" onclick="Slugtolb()">
+  <input type="button" value="FortNights to Days" onclick="FortoDays()">
+  <p id="result"></p>
+</body>
+</html>
